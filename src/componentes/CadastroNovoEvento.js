@@ -10,7 +10,8 @@ export function CadastroNovoEvento() {
     const [novoEvento, setNovoEvento] = useState({
         nome: "",
         data: "",
-        url: ""
+        url: "",
+        qtd:""
     });
 
     const [mensagemSucesso, setMensagemSucesso]= useState('')
@@ -28,7 +29,8 @@ export function CadastroNovoEvento() {
         setNovoEvento({
             nome: "",
             data: "",
-            url: ""
+            url: "",
+            qtd:""
         });
         setMensagemSucesso('Evento Criado com sucesso')
     }
@@ -72,6 +74,17 @@ export function CadastroNovoEvento() {
               />
             </label>
             <br />
+            <label>
+              Quantidade ingressos:
+              <input
+                type="number"
+                name="qtd"
+                value={novoEvento.url}
+                onChange={handleInputChange}
+                style={style.input}
+              />
+            </label>
+            <br/>
             <button type="submit" style={style.button}>
               Adicionar Evento
             </button>
